@@ -11,7 +11,7 @@
  * Settings > Environment variables 에 등록해서 사용하세요.
  * -------------------------------------------------------------
  * 요청 예:
- *   /api/timetable?office=J10&school=7530174&ay=2026&sem=2&grade=2&classNm=3&date=20260906
+ *   /api/timetable?office=J10&school=7530174&ay=2026&sem=2&grade=2&classNm=3&from=20260907&to=20260912
  */
 
 export async function onRequestGet({ request, env }) {
@@ -22,11 +22,15 @@ export async function onRequestGet({ request, env }) {
   const sem = url.searchParams.get("sem");
   const grade = url.searchParams.get("grade");
   const classNm = url.searchParams.get("classNm");
-  const date = url.searchParams.get("date"); // YYYYMMDD, optional
+  const from = url.searchParams.get("from"); // YYYYMMDD, 주 시작일 (월요일)
+  const to = url.searchParams.get("to"); // YYYYMMDD, 주 종료일 (토요일)
 
-  if (!office || !school || !ay || !sem || !grade || !classNm) {
+  if (!office || !school || !ay || !sem || !grade || !classNm || !from || !to) {
     return jsonResponse(
-      { error: "필수 파라미터 누락 (office, school, ay, sem, grade, classNm)" },
+      {
+        error:
+          "필수 파라미터 누락 (office, school, ay, sem, grade, classNm, from, to)",
+      },
       400
     );
   }
@@ -48,7 +52,9 @@ export async function onRequestGet({ request, env }) {
   neisUrl.searchParams.set("SEM", sem);
   neisUrl.searchParams.set("GRADE", grade);
   neisUrl.searchParams.set("CLASS_NM", classNm);
-  if (date) neisUrl.searchParams.set("ALL_TI_YMD", date);
+  neisUrl.searchParams.set("TI_FROM_YMD", from);
+  neisUrl.searchParams.set("TI_TO_YMD", to);
+  neisUrl.searchParams.set("pSize", "100");
 
   try {
     const upstream = await fetch(neisUrl.toString());

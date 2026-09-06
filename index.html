@@ -64,24 +64,44 @@
   </section>
 
   <section class="hero wrap" id="timetable-section" hidden>
-    <p class="hero-eyebrow">오늘의 학급 시간표</p>
-    <h1><span id="school-name">학교</span> 시간표 바로 보기</h1>
-    <button id="change-school-btn" type="button" class="link-btn">다른 학교 검색하기</button>
+    <p class="hero-eyebrow">학급 시간표</p>
 
-    <div class="tt-controls">
-      <label for="grade-select" class="sr-only">학년 선택</label>
-      <select id="grade-select" aria-label="학년 선택"></select>
+    <table class="tt-info-table">
+      <tbody>
+        <tr>
+          <th scope="row">학교명</th>
+          <td id="school-name">학교</td>
+          <th scope="row">검색</th>
+          <td><button id="change-school-btn" type="button">학교찾기</button></td>
+        </tr>
+        <tr>
+          <th scope="row">일자</th>
+          <td>
+            <label for="week-select" class="sr-only">주 선택</label>
+            <select id="week-select" aria-label="주 선택"></select>
+          </td>
+          <th scope="row">학급</th>
+          <td class="tt-class-cell">
+            <label for="grade-select" class="sr-only">학년 선택</label>
+            <select id="grade-select" aria-label="학년 선택"></select>
+            <label for="class-select" class="sr-only">반 선택</label>
+            <select id="class-select" aria-label="반 선택"></select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-      <label for="class-select" class="sr-only">반 선택</label>
-      <select id="class-select" aria-label="반 선택"></select>
-
-      <button id="refresh-btn" type="button">새로고침</button>
+    <div class="tt-nav">
+      <button id="prev-week-btn" type="button" aria-label="이전 주">◀</button>
+      <h1 id="timetable-title">시간표</h1>
+      <button id="next-week-btn" type="button" aria-label="다음 주">▶</button>
     </div>
 
     <div class="tt-card">
       <div id="timetable-grid" role="table" aria-label="학급 시간표">
         <p class="tt-status">시간표를 불러오는 중이에요…</p>
       </div>
+      <p id="updated-at" class="tt-updated"></p>
     </div>
   </section>
 

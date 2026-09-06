@@ -2,10 +2,13 @@
  * app.js
  * -------------------------------------------------------------
  * 흐름:
- *  1) 저장된 학교 선택이 없으면 -> 학교 검색 화면을 보여줌
- *  2) 검색 결과에서 학교를 고르면 -> localStorage에 저장하고
- *     해당 학교의 실제 학년/반 목록을 NEIS classInfo로 가져와 채움
- *  3) 이후 방문부터는 저장된 학교로 바로 시간표를 보여줌
+ *  1) 저장된 학교 선택이 없으면 -> 학교 검색 화면
+ *  2) 학교 선택 -> localStorage 저장 + 학년/반 목록 자동 조회(classInfo)
+ *  3) 주(월~토) 단위로 NEIS 시간표를 가져와서 렌더링
+ *     - "학교찾기" 버튼으로 언제든 학교를 다시 검색할 수 있음
+ *     - 이전/다음 주 화살표, 주 선택 드롭다운으로 이동
+ *     - 처음 본 시간표를 기준으로 이후 달라진 칸을 노란색으로 표시
+ *     - 표 아래에 "수정일"을 표시 (NEIS LOAD_DTM 중 가장 최근 값)
  *
  * 새 기능을 추가할 땐 이 파일 맨 아래에 새 모듈을 이어 붙이는 방식으로
  * 확장하세요 (기존 함수는 최대한 건드리지 않습니다).
@@ -14,12 +17,14 @@
 
 const CFG = window.SITE_CONFIG;
 const SCHOOL_STORAGE_KEY = "neizchool-selected-school";
+const WEEK_OPTION_RANGE = [-1, 0, 1, 2, 3]; // 지난주 ~ 3주 후까지 선택 가능
 
 const state = {
   school: null, // { officeCode, officeName, schoolCode, schoolName }
   gradesMap: {}, // { "1": ["1","2","3"...], ... } NEIS classInfo 결과
   grade: null,
   classNm: null,
+  weekOffset: 0, // 0 = 이번 주, -1 = 지난 주, 1 = 다음 주 ...
   teacherData: null,
 };
 
@@ -109,6 +114,7 @@ function renderSearchResults(schools) {
 
 async function selectSchool(school) {
   state.school = school;
+  state.weekOffset = 0;
   saveSelectedSchool(school);
   await enterTimetableMode();
 }
@@ -147,16 +153,23 @@ async function enterTimetableMode() {
 
   await loadTeacherData();
   await loadGradeClassOptions();
+  buildWeekOptions();
 
   document
     .getElementById("grade-select")
-    .addEventListener("change", onSelectorChange);
+    .addEventListener("change", onGradeChange);
   document
     .getElementById("class-select")
-    .addEventListener("change", onSelectorChange);
+    .addEventListener("change", onClassChange);
   document
-    .getElementById("refresh-btn")
-    .addEventListener("click", loadAndRenderTimetable);
+    .getElementById("week-select")
+    .addEventListener("change", onWeekSelectChange);
+  document
+    .getElementById("prev-week-btn")
+    .addEventListener("click", () => shiftWeek(-1));
+  document
+    .getElementById("next-week-btn")
+    .addEventListener("click", () => shiftWeek(1));
 
   await loadAndRenderTimetable();
 }
@@ -182,7 +195,6 @@ async function loadGradeClassOptions() {
     }
     state.gradesMap = data.grades;
   } catch (err) {
-    // classInfo가 실패해도 시간표 자체는 시도할 수 있게 1~3학년/1~15반 기본값으로 대체
     console.warn("학급 목록 자동 조회 실패, 기본값 사용:", err);
     state.gradesMap = {
       1: Array.from({ length: 15 }, (_, i) => String(i + 1)),
@@ -214,12 +226,70 @@ function fillClassOptions(grade) {
   });
 }
 
-function onSelectorChange(e) {
-  if (e.target.id === "grade-select") {
-    state.grade = Number(e.target.value);
-    fillClassOptions(state.grade);
-  }
+function onGradeChange(e) {
+  state.grade = Number(e.target.value);
+  fillClassOptions(state.grade);
   state.classNm = Number(document.getElementById("class-select").value);
+  loadAndRenderTimetable();
+}
+
+function onClassChange() {
+  state.classNm = Number(document.getElementById("class-select").value);
+  loadAndRenderTimetable();
+}
+
+// ---------- 주(week) 선택 ----------
+
+function getMonday(offsetWeeks) {
+  const now = new Date();
+  const day = now.getDay(); // 0=일 ... 6=토
+  const diffToMonday = day === 0 ? -6 : 1 - day;
+  const monday = new Date(now);
+  monday.setHours(0, 0, 0, 0);
+  monday.setDate(now.getDate() + diffToMonday + offsetWeeks * 7);
+  return monday;
+}
+
+function formatYmd(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}${m}${d}`;
+}
+
+function formatShort(date) {
+  return `${date.getMonth() + 1}.${date.getDate()}`;
+}
+
+function buildWeekOptions() {
+  const select = document.getElementById("week-select");
+  select.innerHTML = "";
+  WEEK_OPTION_RANGE.forEach((offset) => {
+    const monday = getMonday(offset);
+    const saturday = new Date(monday);
+    saturday.setDate(monday.getDate() + 5);
+    const opt = document.createElement("option");
+    opt.value = String(offset);
+    const label =
+      offset === 0
+        ? `${formatShort(monday)}~${formatShort(saturday)} (이번 주)`
+        : `${formatShort(monday)}~${formatShort(saturday)}`;
+    opt.textContent = label;
+    select.appendChild(opt);
+  });
+  select.value = "0";
+}
+
+function onWeekSelectChange(e) {
+  state.weekOffset = Number(e.target.value);
+  loadAndRenderTimetable();
+}
+
+function shiftWeek(delta) {
+  const newOffset = state.weekOffset + delta;
+  if (!WEEK_OPTION_RANGE.includes(newOffset)) return; // 선택 가능 범위 밖이면 무시
+  state.weekOffset = newOffset;
+  document.getElementById("week-select").value = String(newOffset);
   loadAndRenderTimetable();
 }
 
@@ -239,8 +309,16 @@ async function loadAndRenderTimetable() {
   const grid = document.getElementById("timetable-grid");
   grid.setAttribute("aria-busy", "true");
   grid.innerHTML = `<p class="tt-status">시간표를 불러오는 중이에요…</p>`;
+  document.getElementById("updated-at").textContent = "";
+  document.getElementById(
+    "timetable-title"
+  ).textContent = `${state.grade}학년 ${state.classNm}반 시간표`;
 
   const { ay, sem } = currentAcademicPeriod();
+  const monday = getMonday(state.weekOffset);
+  const saturday = new Date(monday);
+  saturday.setDate(monday.getDate() + 5);
+
   const params = new URLSearchParams({
     office: state.school.officeCode,
     school: state.school.schoolCode,
@@ -248,6 +326,8 @@ async function loadAndRenderTimetable() {
     sem: String(sem),
     grade: String(state.grade),
     classNm: String(state.classNm),
+    from: formatYmd(monday),
+    to: formatYmd(saturday),
   });
 
   try {
@@ -263,6 +343,7 @@ async function loadAndRenderTimetable() {
     const changedCells = baseline ? diffTables(baseline, table) : new Set();
 
     renderTimetable(table, changedCells);
+    renderUpdatedAt(data.rows);
   } catch (err) {
     grid.innerHTML = `<p class="tt-status tt-status--error">
       시간표를 불러오지 못했어요.<br><small>${escapeHtml(String(err.message || err))}</small>
@@ -310,10 +391,10 @@ function getTeacherName(day, period) {
   return dayList[period - 1] || "";
 }
 
-// ---------- 변경 감지 (baseline diff, 학교+학년+반 별로 저장) ----------
+// ---------- 변경 감지 (baseline diff, 학교+학년+반+주 별로 저장) ----------
 
 function storageKey() {
-  return `tt-baseline-${state.school.schoolCode}-${state.grade}-${state.classNm}`;
+  return `tt-baseline-${state.school.schoolCode}-${state.grade}-${state.classNm}-w${state.weekOffset}-${getMonday(state.weekOffset).getTime()}`;
 }
 
 function getBaselineFromStorage() {
@@ -377,6 +458,17 @@ function renderTimetable(table, changedCells) {
     html += `<p class="tt-legend"><span class="tt-swatch"></span> 원래 시간표와 달라진 수업이에요.</p>`;
   }
   grid.innerHTML = html;
+}
+
+function renderUpdatedAt(rows) {
+  const el = document.getElementById("updated-at");
+  const timestamps = rows.map((r) => r.updatedAt).filter(Boolean);
+  if (!timestamps.length) {
+    el.textContent = "";
+    return;
+  }
+  const latest = timestamps.sort().at(-1);
+  el.textContent = `수정일: ${latest}`;
 }
 
 function escapeHtml(str) {
