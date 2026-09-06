@@ -243,7 +243,12 @@ function onClassChange() {
 function getMonday(offsetWeeks) {
   const now = new Date();
   const day = now.getDay(); // 0=일 ... 6=토
-  const diffToMonday = day === 0 ? -6 : 1 - day;
+  // 주말에는 이미 지나간 이번 주 대신 다음 월요일이 있는 주를 "이번 주"로 취급
+  let diffToMonday;
+  if (day === 0) diffToMonday = 1; // 일요일 -> 내일이 월요일
+  else if (day === 6) diffToMonday = 2; // 토요일 -> 모레가 월요일
+  else diffToMonday = 1 - day; // 평일 -> 이번 주 월요일로
+
   const monday = new Date(now);
   monday.setHours(0, 0, 0, 0);
   monday.setDate(now.getDate() + diffToMonday + offsetWeeks * 7);
@@ -266,14 +271,14 @@ function buildWeekOptions() {
   select.innerHTML = "";
   WEEK_OPTION_RANGE.forEach((offset) => {
     const monday = getMonday(offset);
-    const saturday = new Date(monday);
-    saturday.setDate(monday.getDate() + 5);
+    const friday = new Date(monday);
+    friday.setDate(monday.getDate() + 4);
     const opt = document.createElement("option");
     opt.value = String(offset);
     const label =
       offset === 0
-        ? `${formatShort(monday)}~${formatShort(saturday)} (이번 주)`
-        : `${formatShort(monday)}~${formatShort(saturday)}`;
+        ? `${formatShort(monday)}~${formatShort(friday)} (이번 주)`
+        : `${formatShort(monday)}~${formatShort(friday)}`;
     opt.textContent = label;
     select.appendChild(opt);
   });
@@ -319,8 +324,8 @@ async function loadAndRenderTimetable() {
 
   const { ay, sem } = currentAcademicPeriod();
   const monday = getMonday(state.weekOffset);
-  const saturday = new Date(monday);
-  saturday.setDate(monday.getDate() + 5);
+  const friday = new Date(monday);
+  friday.setDate(monday.getDate() + 4);
 
   const params = new URLSearchParams({
     office: state.school.officeCode,
@@ -330,7 +335,7 @@ async function loadAndRenderTimetable() {
     grade: String(state.grade),
     classNm: String(state.classNm),
     from: formatYmd(monday),
-    to: formatYmd(saturday),
+    to: formatYmd(friday),
   });
 
   try {

@@ -38,7 +38,19 @@ GROUP_PATTERN = re.compile(r"^([A-Za-z])_")
 
 
 def monday_of(d: date) -> date:
+    """d가 속한 주(월~일)의 월요일. 실제 comci 응답의 calendar_date에 쓰입니다."""
     return d - timedelta(days=d.weekday())
+
+
+def reference_monday(today: date) -> date:
+    """오늘 기준 "이번 주"의 월요일. 주말이면 다음 월요일 (js/app.js의 getMonday와 동일한 규칙).
+    comci 응답에서 calendar_date를 못 찾았을 때의 폴백에만 씁니다."""
+    weekday = today.weekday()  # 월=0 ... 일=6
+    if weekday == 5:  # 토요일
+        return today + timedelta(days=2)
+    if weekday == 6:  # 일요일
+        return today + timedelta(days=1)
+    return today - timedelta(days=weekday)
 
 
 def convert_entry(entry):
@@ -95,7 +107,7 @@ def fetch_all_classes():
         classes[key] = by_day
 
     if detected_monday is None:
-        detected_monday = monday_of(date.today())
+        detected_monday = reference_monday(date.today())
 
     return classes, detected_monday
 

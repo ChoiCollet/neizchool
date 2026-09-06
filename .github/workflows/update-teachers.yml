@@ -16,7 +16,7 @@ jobs:
           python-version: "3.11"
 
       - name: 의존 패키지 설치
-        run: pip install comci
+        run: pip install comci requests
 
       - name: 교사 매핑 갱신 스크립트 실행
         run: python scripts/scrape_teachers.py
