@@ -1,0 +1,7 @@
+cd neizchool-site   # 방금 받은 zip 압축 해제한 폴더
+git init
+git remote add origin https://github.com/ChoiCollet/neizchool.git
+git add .
+git commit -m "feat: neizchool 초기 구현"
+git branch -M main
+git push -u origin main
