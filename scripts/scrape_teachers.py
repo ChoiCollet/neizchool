@@ -31,13 +31,19 @@ DAYS = ["월", "화", "수", "목", "금"]
 def fetch_all_classes():
     """
     comci 패키지로 전체 학년/반 시간표를 가져와서
-    {"1-1": {"월": ["국어","수학",...], ...}, ...} 형태로 반환.
+    {"1-1": {"월": [{"teacher": "김진", "group": "E"}, ...], ...}, ...} 형태로 반환.
+
+    group은 컴시간이 선택과목 이동수업에 붙이는 그룹 문자(예: "E_역학" -> "E")입니다.
+    일반 과목(그룹 문자 없음)은 group을 null로 둡니다.
 
     TODO: 아래는 comci 패키지의 일반적인 사용 패턴을 기준으로 작성한
     골격입니다. 실제 반환 필드명(teacher, subject 등)은 패키지 버전에 따라
     다를 수 있으니, 처음 한 번은 print(raw)로 실제 구조를 찍어보고 맞춰주세요.
     """
+    import re
     from comci import Comcigan  # pip install comci
+
+    GROUP_PATTERN = re.compile(r"^([A-Za-z])_")
 
     comci = Comcigan()
     school = comci.school(str(SCHOOL_CODE))
@@ -54,14 +60,27 @@ def fetch_all_classes():
                 continue
 
             key = f"{grade}-{class_num}"
-            by_day = {d: [] for d in DAYS}
+            by_day = {d: [None] * 8 for d in DAYS}  # 최대 8교시까지 자리 확보
             for entry in timetable:
                 day = DAYS[entry["day"] - 1] if isinstance(entry.get("day"), int) else entry.get("day")
-                teacher = entry.get("teacher", "")
-                if day in by_day:
-                    by_day[day].append(teacher)
+                period = entry.get("period")  # 1부터 시작한다고 가정
+                teacher = entry.get("teacher", "") or ""
+                subject = entry.get("subject", "") or ""
 
-            if any(by_day.values()):
+                match = GROUP_PATTERN.match(subject)
+                group = match.group(1) if match else None
+
+                if day in by_day and isinstance(period, int) and 1 <= period <= 8:
+                    by_day[day][period - 1] = {"teacher": teacher, "group": group}
+
+            # None으로 남은 빈 교시는 빈 값으로 채움
+            for day in DAYS:
+                by_day[day] = [
+                    slot if slot else {"teacher": "", "group": None}
+                    for slot in by_day[day]
+                ]
+
+            if any(any(slot["teacher"] for slot in by_day[d]) for d in DAYS):
                 result[key] = by_day
 
     return result

@@ -1,14 +1,54 @@
 {
-  "_설명": "이 파일은 학급별 담당 교사 이름을 저장합니다. scripts/scrape_teachers.py 가 자동으로 갱신하거나, 직접 손으로 고쳐도 됩니다.",
+  "_설명": "이 파일은 학급별 담당 교사 이름과 선택과목 그룹 문자를 저장합니다. scripts/scrape_teachers.py가 자동으로 갱신하거나, 직접 손으로 고쳐도 됩니다. group은 컴시간의 이동수업 그룹 문자(A/B/C...)이고, 없으면 null입니다.",
   "updatedAt": "2026-09-06",
   "source": "manual",
   "classes": {
     "1-1": {
-      "월": ["", "", "", "", "", "", ""],
-      "화": ["", "", "", "", "", "", ""],
-      "수": ["", "", "", "", "", "", ""],
-      "목": ["", "", "", "", "", "", ""],
-      "금": ["", "", "", "", "", "", ""]
+      "월": [
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null }
+      ],
+      "화": [
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null }
+      ],
+      "수": [
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null }
+      ],
+      "목": [
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null }
+      ],
+      "금": [
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null },
+        { "teacher": "", "group": null }
+      ]
     }
   }
 }

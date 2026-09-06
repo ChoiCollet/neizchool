@@ -384,11 +384,15 @@ function dateToDayLabel(yyyymmdd) {
   return map[dow] || null;
 }
 
-function getTeacherName(day, period) {
+function getComciInfo(day, period) {
   const key = `${state.grade}-${state.classNm}`;
   const dayList = state.teacherData?.classes?.[key]?.[day];
-  if (!dayList) return "";
-  return dayList[period - 1] || "";
+  if (!dayList) return { teacher: "", group: null };
+  const slot = dayList[period - 1];
+  if (!slot) return { teacher: "", group: null };
+  // 이전 스키마(문자열 배열) 호환: 문자열이면 교사 이름으로만 처리
+  if (typeof slot === "string") return { teacher: slot, group: null };
+  return { teacher: slot.teacher || "", group: slot.group || null };
 }
 
 // ---------- 변경 감지 (baseline diff, 학교+학년+반+주 별로 저장) ----------
@@ -443,10 +447,11 @@ function renderTimetable(table, changedCells) {
     html += `<tr><th scope="row">${p}</th>`;
     days.forEach((day) => {
       const subject = table[day]?.[p] || "";
-      const teacher = getTeacherName(day, p);
+      const { teacher, group } = getComciInfo(day, p);
+      const displaySubject = group && subject ? `${group}_${subject}` : subject;
       const isChanged = changedCells.has(`${day}-${p}`);
       html += `<td class="${isChanged ? "tt-changed" : ""}">
-        <span class="tt-subject">${escapeHtml(subject) || "-"}</span>
+        <span class="tt-subject">${escapeHtml(displaySubject) || "-"}</span>
         ${teacher ? `<span class="tt-teacher">${escapeHtml(teacher)}</span>` : ""}
       </td>`;
     });
@@ -468,7 +473,22 @@ function renderUpdatedAt(rows) {
     return;
   }
   const latest = timestamps.sort().at(-1);
-  el.textContent = `수정일: ${latest}`;
+  el.textContent = `수정일: ${formatUpdatedAt(latest)}`;
+}
+
+function formatUpdatedAt(raw) {
+  // NEIS LOAD_DTM은 보통 YYYYMMDD(날짜만) 형태로 옵니다.
+  // 혹시 더 긴 형식(시:분:초 포함)으로 오는 경우도 최대한 보기 좋게 보여줍니다.
+  const digits = String(raw).replace(/\D/g, "");
+  if (digits.length >= 14) {
+    // YYYYMMDDHHMMSS
+    return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6, 8)} ${digits.slice(8, 10)}:${digits.slice(10, 12)}:${digits.slice(12, 14)}`;
+  }
+  if (digits.length >= 8) {
+    // YYYYMMDD (시:분:초 정보 없음 - NEIS API 한계)
+    return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6, 8)}`;
+  }
+  return String(raw);
 }
 
 function escapeHtml(str) {
