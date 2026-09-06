@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neizchool.pages.dev/sitemap.xml

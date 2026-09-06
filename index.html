@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>neizchool | 우리 학교 시간표 실시간 조회 &amp; 변경 감지</title>
+<meta name="description" content="학급별 시간표를 한눈에 확인하고, 원래 시간표와 달라진 수업은 자동으로 표시해주는 우리 학교 전용 시간표 조회 서비스입니다.">
+<link rel="canonical" href="https://neizchool.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="우리 학교 시간표 | 실시간 시간표 조회 & 변경 감지">
+<meta property="og:description" content="학급별 시간표를 한눈에 확인하고, 변경된 수업은 자동으로 표시해주는 시간표 조회 서비스입니다.">
+<meta property="og:url" content="https://neizchool.pages.dev/">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "neizchool",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Web",
+  "description": "학급별 시간표를 조회하고 변경된 수업을 자동으로 표시해주는 학교 시간표 서비스",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="site-logo">neizchool</a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="/" aria-current="page">시간표</a>
+      <a href="/about.html">사이트 소개</a>
+      <a href="/contact.html">문의</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" id="school-search-section" hidden>
+    <p class="hero-eyebrow">시작하기</p>
+    <h1>학교를 검색해서 선택하세요</h1>
+    <p class="hero-desc">한 번 선택하면 이 기기에 저장되어 다음부터는 바로 시간표가 보여요.</p>
+
+    <form id="school-search-form" class="search-form" role="search">
+      <label for="search-input" class="sr-only">검색할 학교명</label>
+      <input id="search-input" type="text" placeholder="검색할 학교명 (예: 김포호수고등학교)" autocomplete="off">
+      <button type="submit">검색</button>
+    </form>
+
+    <div class="tt-card">
+      <table class="search-table">
+        <thead>
+          <tr><th scope="col">지역</th><th scope="col">학교명</th></tr>
+        </thead>
+        <tbody id="search-results"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="hero wrap" id="timetable-section" hidden>
+    <p class="hero-eyebrow">오늘의 학급 시간표</p>
+    <h1><span id="school-name">학교</span> 시간표 바로 보기</h1>
+    <button id="change-school-btn" type="button" class="link-btn">다른 학교 검색하기</button>
+
+    <div class="tt-controls">
+      <label for="grade-select" class="sr-only">학년 선택</label>
+      <select id="grade-select" aria-label="학년 선택"></select>
+
+      <label for="class-select" class="sr-only">반 선택</label>
+      <select id="class-select" aria-label="반 선택"></select>
+
+      <button id="refresh-btn" type="button">새로고침</button>
+    </div>
+
+    <div class="tt-card">
+      <div id="timetable-grid" role="table" aria-label="학급 시간표">
+        <p class="tt-status">시간표를 불러오는 중이에요…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section wrap" id="how-to">
+    <h2>사용 방법</h2>
+    <ol class="steps">
+      <li><strong>1. 학년 선택</strong>상단 드롭다운에서 확인하고 싶은 학년을 골라요.</li>
+      <li><strong>2. 반 선택</strong>이어서 반을 선택하면 시간표가 자동으로 바뀌어요.</li>
+      <li><strong>3. 변경 확인</strong>원래 시간표와 다른 수업은 노란색으로 표시돼요.</li>
+    </ol>
+  </section>
+
+  <section class="content-section wrap" id="features">
+    <h2>기능 소개</h2>
+    <ul class="feature-list">
+      <li>
+        <strong>실시간 시간표 조회</strong>
+        <span>NEIS(나이스 교육정보 개방포털) 공식 데이터를 그대로 불러와서 보여줘요. 별도 앱 설치 없이 웹에서 바로 확인할 수 있어요.</span>
+      </li>
+      <li>
+        <strong>시간표 변경 자동 감지</strong>
+        <span>학기 초 시간표를 기준으로 저장해두고, 이후 조회할 때 달라진 교시만 노란색으로 표시해줘요. 보강이나 시간 변경을 놓치지 않도록 도와줘요.</span>
+      </li>
+      <li>
+        <strong>담당 선생님 이름 표시</strong>
+        <span>NEIS 데이터에는 없는 담당 교사 정보를 별도로 정리해서 과목명과 함께 보여줘요.</span>
+      </li>
+      <li>
+        <strong>모바일 친화적 화면</strong>
+        <span>등하교길 스마트폰으로도 표가 잘리지 않고 한눈에 들어오도록 만들었어요.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section wrap" id="faq">
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button">시간표가 실제 학교 시간표와 다르게 나와요.</button>
+      <div class="faq-answer">
+        <p>이 서비스는 NEIS 교육정보 개방포털의 공식 데이터를 그대로 가져와요. 다만 학교에서 시간표를 등록한 직후에는 반영까지 시간이 걸릴 수 있고, 아주 최근에 확정된 보강은 다음 날 아침에 반영되는 경우가 많아요. 차이가 계속된다면 문의 페이지로 알려주세요.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button">담당 선생님 이름이 안 보여요.</button>
+      <div class="faq-answer">
+        <p>선생님 정보는 NEIS가 아니라 별도로 정리한 데이터라서, 아직 매핑이 안 된 학급이나 학기 초에는 빈칸으로 보일 수 있어요. 새 학기 편성이 끝나는 대로 순차적으로 채워질 예정이에요.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button">노란색으로 표시된 수업은 무조건 바뀐 게 확실한가요?</button>
+      <div class="faq-answer">
+        <p>이 사이트에 처음 접속했을 때의 시간표를 기준으로 비교해서 달라진 칸을 표시해요. 즉 "내가 처음 봤던 시간표"와 다른 부분을 알려주는 거라, 학교 공지사항이나 담임 선생님 안내와 함께 최종 확인하는 걸 추천해요.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button">다른 학교에서도 쓸 수 있나요?</button>
+      <div class="faq-answer">
+        <p>현재는 한 학교를 기준으로 만든 서비스라 바로 다른 학교에 적용되진 않아요. 다만 같은 방식으로 학교 코드만 바꿔서 각 학교별로 운영하는 형태는 가능해요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section wrap" id="tips">
+    <h2>시간표 확인 팁</h2>
+    <ul class="tip-list">
+      <li>등교 전날 밤에 한 번, 등교 직전 아침에 한 번 확인하면 갑작스러운 보강도 놓치지 않을 수 있어요.</li>
+      <li>노란색 표시가 뜬 날은 담임 선생님 안내나 학교 알림장도 함께 확인해서 이유(시험, 행사, 교사 부재 등)를 파악해두면 좋아요.</li>
+      <li>매 학기 초 시간표가 확정된 첫날 한 번 접속해두면, 그 시점을 기준으로 이후 변경 사항이 정확하게 비교돼요.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 neizchool</span>
+    <nav aria-label="푸터 메뉴">
+      <a href="/about.html">사이트 소개</a>
+      <a href="/contact.html">문의</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

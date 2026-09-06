@@ -1,0 +1,30 @@
+name: 교사 매핑 데이터 갱신
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 매일 UTC 21:00 (한국시간 오전 6시)
+  workflow_dispatch: {} # 수동 실행 버튼도 사용 가능
+
+jobs:
+  update-teachers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 의존 패키지 설치
+        run: pip install comci
+
+      - name: 교사 매핑 갱신 스크립트 실행
+        run: python scripts/scrape_teachers.py
+
+      - name: 변경사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/teachers.json
+          git diff --cached --quiet || git commit -m "chore: 교사 매핑 데이터 자동 갱신"
+          git push
