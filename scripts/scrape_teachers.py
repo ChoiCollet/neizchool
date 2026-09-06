@@ -116,7 +116,10 @@ def main():
     try:
         classes, monday = fetch_all_classes()
     except Exception as e:
+        import traceback
+
         print(f"[경고] 파싱 실패, 기존 teachers.json 유지: {e}", file=sys.stderr)
+        traceback.print_exc()
         return 1
 
     if not classes:
