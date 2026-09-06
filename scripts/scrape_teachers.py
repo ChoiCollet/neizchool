@@ -68,12 +68,46 @@ def convert_entry(entry):
     return {"teacher": teacher, "group": group, "changed": changed}
 
 
+def _patch_comci_get_code():
+    """
+    comci 0.7.0의 timetable._get_code가 컴시간 원본 데이터에 섞인 비정상
+    문자열(예: '>31029')을 int()로 바로 변환하려다 죽는 버그가 있어서,
+    같은 로직에 안전장치만 추가한 버전으로 교체합니다.
+    (라이브러리 자체를 수정하는 게 아니라 우리 스크립트 안에서만 적용됨)
+    """
+    import comci.timetable as _tt
+
+    def _safe_get_code(data, grade, class_num, day, period):
+        grade_data = _tt._safe_index(data, grade + 1)
+        if grade_data is None:
+            return 0
+        class_data = _tt._safe_index(grade_data, class_num + 1)
+        if class_data is None:
+            return 0
+        day_data = _tt._safe_index(class_data, day)
+        if not isinstance(day_data, list) or period >= len(day_data):
+            return 0
+        val = day_data[period]
+        if not val:
+            return 0
+        try:
+            return int(val)
+        except (TypeError, ValueError):
+            # 컴시간 원본 응답에 숫자가 아닌 값이 섞여 들어온 경우:
+            # 죽지 않고 "변경 없음"으로 안전하게 처리
+            return 0
+
+    _tt._get_code = _safe_get_code
+
+
 def fetch_all_classes():
     """
     comci 패키지로 전체 학년/반의 "이번 주" 시간표를 한 번에 가져옵니다.
     반환: (classes_dict, monday_date)
     """
     from comci import get_timetable  # pip install comci
+
+    _patch_comci_get_code()
 
     raw = get_timetable(SCHOOL_CODE)  # 학년/반 미지정 -> 전체
     if not raw:
