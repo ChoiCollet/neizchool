@@ -1,16 +1,22 @@
 """
 scrape_teachers.py
 -------------------------------------------------------------
-컴시간알리미에서 "담당 교사 이름"만 가져와서 data/teachers.json을 갱신합니다.
-GitHub Actions가 주기적으로 이 스크립트를 실행하고, 결과가 바뀌면 자동 커밋합니다.
+컴시간알리미(comci.net)에서 담당 교사 이름, 선택과목 그룹 문자,
+그리고 컴시간이 직접 계산해주는 "변경됨(changed)" 여부까지 가져와서
+data/teachers.json을 갱신합니다.
+
+comci 패키지(pip install comci)의 실제 사용법을 기준으로 작성했습니다.
+(이전 버전은 API를 잘못 가정해서 동작하지 않았습니다 - 죄송합니다)
 
 주의:
-- 이 환경(샌드박스)에서는 comci.net 접근이 막혀 있어서 실제 응답 구조를 확인하지
-  못했습니다. 로컬 PC나 GitHub Actions에서 아래 pip install 후 한 번 직접
-  실행해서 결과 JSON 구조를 확인해보고, 실제 필드명에 맞게 조정해주세요.
-- 컴시간 쪽 사이트 구조가 바뀌면 이 스크립트가 깨질 수 있습니다. 실패하면
-  data/teachers.json은 건드리지 않고 그대로 두도록 만들어서, 사이트 쪽에는
-  영향이 가지 않게 했습니다.
+- 이 스크립트는 "이번 주" 데이터만 가져옵니다. 그래서 data/teachers.json에는
+  이 데이터가 어느 주(월요일 날짜) 것인지 weekOf로 같이 저장하고,
+  프론트엔드(js/app.js)는 지금 보고 있는 주가 이 weekOf와 같을 때만
+  교사명/그룹문자/변경표시를 보여줍니다. 다른 주를 보면 NEIS 데이터만
+  나오고 교사명 등은 자연스럽게 빠집니다 (에러 아님, 의도된 동작).
+- GitHub Actions가 매일 이 스크립트를 실행하므로 weekOf는 항상 최신으로 유지됩니다.
+- 컴시간 쪽 구조가 바뀌면 이 스크립트가 실패할 수 있습니다. 실패하면
+  data/teachers.json은 건드리지 않고 그대로 두어 사이트에는 영향 없게 했습니다.
 
 실행:
     pip install comci
@@ -19,76 +25,84 @@ GitHub Actions가 주기적으로 이 스크립트를 실행하고, 결과가 �
 """
 
 import json
+import re
 import sys
+from datetime import date, timedelta
 from pathlib import Path
 
-SCHOOL_CODE = 90313  # 컴시간 내부 학교코드 (js/config.js의 comciSchoolCode와 동일해야 함)
+SCHOOL_CODE = 90313  # 컴시간 내부 학교코드
 OUTPUT_PATH = Path(__file__).parent.parent / "data" / "teachers.json"
 
-DAYS = ["월", "화", "수", "목", "금"]
+CLASS_LABEL_PATTERN = re.compile(r"(\d+)학년\s*(\d+)반")
+GROUP_PATTERN = re.compile(r"^([A-Za-z])_")
+
+
+def monday_of(d: date) -> date:
+    return d - timedelta(days=d.weekday())
+
+
+def convert_entry(entry):
+    """comci의 교시 항목 하나를 {teacher, group, changed}로 변환. 빈 칸은 None."""
+    if not entry:
+        return {"teacher": "", "group": None, "changed": False}
+
+    subject = entry.get("subject") or ""
+    teacher = entry.get("teacher") or ""
+    changed = bool(entry.get("changed"))
+
+    match = GROUP_PATTERN.match(subject)
+    group = match.group(1) if match else None
+
+    return {"teacher": teacher, "group": group, "changed": changed}
 
 
 def fetch_all_classes():
     """
-    comci 패키지로 전체 학년/반 시간표를 가져와서
-    {"1-1": {"월": [{"teacher": "김진", "group": "E"}, ...], ...}, ...} 형태로 반환.
-
-    group은 컴시간이 선택과목 이동수업에 붙이는 그룹 문자(예: "E_역학" -> "E")입니다.
-    일반 과목(그룹 문자 없음)은 group을 null로 둡니다.
-
-    TODO: 아래는 comci 패키지의 일반적인 사용 패턴을 기준으로 작성한
-    골격입니다. 실제 반환 필드명(teacher, subject 등)은 패키지 버전에 따라
-    다를 수 있으니, 처음 한 번은 print(raw)로 실제 구조를 찍어보고 맞춰주세요.
+    comci 패키지로 전체 학년/반의 "이번 주" 시간표를 한 번에 가져옵니다.
+    반환: (classes_dict, monday_date)
     """
-    import re
-    from comci import Comcigan  # pip install comci
+    from comci import get_timetable  # pip install comci
 
-    GROUP_PATTERN = re.compile(r"^([A-Za-z])_")
+    raw = get_timetable(SCHOOL_CODE)  # 학년/반 미지정 -> 전체
+    if not raw:
+        raise RuntimeError("comci가 빈 데이터를 반환했습니다.")
 
-    comci = Comcigan()
-    school = comci.school(str(SCHOOL_CODE))
+    classes = {}
+    detected_monday = None
 
-    result = {}
-    for grade in range(1, 4):
-        for class_num in range(1, 12):
-            try:
-                timetable = school.timetable(grade=grade, class_=class_num)
-            except Exception:
-                continue  # 존재하지 않는 반이면 건너뜀
+    for label, days in raw.items():
+        match = CLASS_LABEL_PATTERN.match(label)
+        if not match:
+            continue
+        key = f"{match.group(1)}-{match.group(2)}"
 
-            if not timetable:
-                continue
+        by_day = {}
+        for day_name, entries in (days or {}).items():
+            slots = [convert_entry(e) for e in (entries or [])]
+            by_day[day_name] = slots
 
-            key = f"{grade}-{class_num}"
-            by_day = {d: [None] * 8 for d in DAYS}  # 최대 8교시까지 자리 확보
-            for entry in timetable:
-                day = DAYS[entry["day"] - 1] if isinstance(entry.get("day"), int) else entry.get("day")
-                period = entry.get("period")  # 1부터 시작한다고 가정
-                teacher = entry.get("teacher", "") or ""
-                subject = entry.get("subject", "") or ""
+            # 실제 날짜가 있으면 이 데이터가 어느 주(월요일) 것인지 계산
+            if detected_monday is None:
+                for e in entries or []:
+                    if e and e.get("calendar_date"):
+                        try:
+                            d = date.fromisoformat(e["calendar_date"])
+                            detected_monday = monday_of(d)
+                        except ValueError:
+                            pass
+                        break
 
-                match = GROUP_PATTERN.match(subject)
-                group = match.group(1) if match else None
+        classes[key] = by_day
 
-                if day in by_day and isinstance(period, int) and 1 <= period <= 8:
-                    by_day[day][period - 1] = {"teacher": teacher, "group": group}
+    if detected_monday is None:
+        detected_monday = monday_of(date.today())
 
-            # None으로 남은 빈 교시는 빈 값으로 채움
-            for day in DAYS:
-                by_day[day] = [
-                    slot if slot else {"teacher": "", "group": None}
-                    for slot in by_day[day]
-                ]
-
-            if any(any(slot["teacher"] for slot in by_day[d]) for d in DAYS):
-                result[key] = by_day
-
-    return result
+    return classes, detected_monday
 
 
 def main():
     try:
-        classes = fetch_all_classes()
+        classes, monday = fetch_all_classes()
     except Exception as e:
         print(f"[경고] 파싱 실패, 기존 teachers.json 유지: {e}", file=sys.stderr)
         return 1
@@ -98,8 +112,9 @@ def main():
         return 1
 
     payload = {
-        "_설명": "이 파일은 scripts/scrape_teachers.py가 자동으로 갱신합니다.",
-        "updatedAt": __import__("datetime").date.today().isoformat(),
+        "_설명": "이 파일은 scripts/scrape_teachers.py가 매일 자동으로 갱신합니다. weekOf와 다른 주를 보고 있으면 사이트는 이 데이터를 사용하지 않습니다.",
+        "updatedAt": date.today().isoformat(),
+        "weekOf": monday.isoformat(),
         "source": "comci-auto",
         "classes": classes,
     }
@@ -107,7 +122,7 @@ def main():
     OUTPUT_PATH.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print(f"업데이트 완료: {OUTPUT_PATH}")
+    print(f"업데이트 완료: {OUTPUT_PATH} (weekOf={monday.isoformat()}, 학급 수={len(classes)})")
     return 0
 
 

@@ -165,11 +165,11 @@ async function enterTimetableMode() {
     .getElementById("week-select")
     .addEventListener("change", onWeekSelectChange);
   document
-    .getElementById("prev-week-btn")
-    .addEventListener("click", () => shiftWeek(-1));
+    .getElementById("prev-class-btn")
+    .addEventListener("click", () => shiftClass(-1));
   document
-    .getElementById("next-week-btn")
-    .addEventListener("click", () => shiftWeek(1));
+    .getElementById("next-class-btn")
+    .addEventListener("click", () => shiftClass(1));
 
   await loadAndRenderTimetable();
 }
@@ -285,11 +285,14 @@ function onWeekSelectChange(e) {
   loadAndRenderTimetable();
 }
 
-function shiftWeek(delta) {
-  const newOffset = state.weekOffset + delta;
-  if (!WEEK_OPTION_RANGE.includes(newOffset)) return; // 선택 가능 범위 밖이면 무시
-  state.weekOffset = newOffset;
-  document.getElementById("week-select").value = String(newOffset);
+function shiftClass(delta) {
+  const classList = state.gradesMap[state.grade] || [];
+  if (!classList.length) return;
+  const currentIndex = classList.indexOf(String(state.classNm));
+  const safeIndex = currentIndex === -1 ? 0 : currentIndex;
+  const newIndex = (safeIndex + delta + classList.length) % classList.length;
+  state.classNm = Number(classList[newIndex]);
+  document.getElementById("class-select").value = classList[newIndex];
   loadAndRenderTimetable();
 }
 
@@ -341,6 +344,7 @@ async function loadAndRenderTimetable() {
       saveBaselineToStorage(table);
     }
     const changedCells = baseline ? diffTables(baseline, table) : new Set();
+    mergeComciChangedFlags(changedCells);
 
     renderTimetable(table, changedCells);
     renderUpdatedAt(data.rows);
@@ -385,20 +389,37 @@ function dateToDayLabel(yyyymmdd) {
 }
 
 function getComciInfo(day, period) {
+  if (!isComciWeekMatch()) return { teacher: "", group: null, changed: false };
   const key = `${state.grade}-${state.classNm}`;
   const dayList = state.teacherData?.classes?.[key]?.[day];
-  if (!dayList) return { teacher: "", group: null };
+  if (!dayList) return { teacher: "", group: null, changed: false };
   const slot = dayList[period - 1];
-  if (!slot) return { teacher: "", group: null };
-  // 이전 스키마(문자열 배열) 호환: 문자열이면 교사 이름으로만 처리
-  if (typeof slot === "string") return { teacher: slot, group: null };
-  return { teacher: slot.teacher || "", group: slot.group || null };
+  if (!slot) return { teacher: "", group: null, changed: false };
+  return {
+    teacher: slot.teacher || "",
+    group: slot.group || null,
+    changed: Boolean(slot.changed),
+  };
+}
+
+function isComciWeekMatch() {
+  const weekOf = state.teacherData?.weekOf;
+  if (!weekOf) return false;
+  const monday = getMonday(state.weekOffset);
+  return formatIso(monday) === weekOf;
+}
+
+function formatIso(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
 }
 
 // ---------- 변경 감지 (baseline diff, 학교+학년+반+주 별로 저장) ----------
 
 function storageKey() {
-  return `tt-baseline-${state.school.schoolCode}-${state.grade}-${state.classNm}-w${state.weekOffset}-${getMonday(state.weekOffset).getTime()}`;
+  return `tt-baseline-${state.school.schoolCode}-${state.grade}-${state.classNm}`;
 }
 
 function getBaselineFromStorage() {
@@ -430,6 +451,17 @@ function diffTables(baseline, current) {
     }
   });
   return changed;
+}
+
+function mergeComciChangedFlags(changedCells) {
+  if (!isComciWeekMatch()) return;
+  CFG.days.forEach((day) => {
+    for (let p = 1; p <= CFG.periodsPerDay; p++) {
+      if (getComciInfo(day, p).changed) {
+        changedCells.add(`${day}-${p}`);
+      }
+    }
+  });
 }
 
 // ---------- 렌더링 ----------

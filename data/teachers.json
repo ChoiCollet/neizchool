@@ -1,53 +1,54 @@
 {
-  "_설명": "이 파일은 학급별 담당 교사 이름과 선택과목 그룹 문자를 저장합니다. scripts/scrape_teachers.py가 자동으로 갱신하거나, 직접 손으로 고쳐도 됩니다. group은 컴시간의 이동수업 그룹 문자(A/B/C...)이고, 없으면 null입니다.",
+  "_설명": "이 파일은 scripts/scrape_teachers.py가 매일 자동으로 갱신합니다. weekOf와 다른 주를 보고 있으면 사이트는 이 데이터를 사용하지 않습니다.",
   "updatedAt": "2026-09-06",
+  "weekOf": "2026-09-01",
   "source": "manual",
   "classes": {
     "1-1": {
       "월": [
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null }
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false }
       ],
       "화": [
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null }
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false }
       ],
       "수": [
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null }
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false }
       ],
       "목": [
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null }
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false }
       ],
       "금": [
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null },
-        { "teacher": "", "group": null }
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false },
+        { "teacher": "", "group": null, "changed": false }
       ]
     }
   }
