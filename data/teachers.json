@@ -1,54 +1,5095 @@
 {
   "_설명": "이 파일은 scripts/scrape_teachers.py가 매일 자동으로 갱신합니다. weekOf와 다른 주를 보고 있으면 사이트는 이 데이터를 사용하지 않습니다.",
-  "updatedAt": "2026-09-06",
-  "weekOf": "2026-09-01",
-  "source": "manual",
+  "updatedAt": "2026-09-07",
+  "weekOf": "2026-09-07",
+  "source": "comci-auto",
   "classes": {
     "1-1": {
       "월": [
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false }
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
       ],
       "화": [
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false }
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
       ],
       "수": [
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false }
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
       ],
       "목": [
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false }
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
       ],
       "금": [
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false },
-        { "teacher": "", "group": null, "changed": false }
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-2": {
+      "월": [
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-3": {
+      "월": [
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-4": {
+      "월": [
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "권승*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-5": {
+      "월": [
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-6": {
+      "월": [
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "고지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박선*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-7": {
+      "월": [
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-8": {
+      "월": [
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-9": {
+      "월": [
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이명*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-10": {
+      "월": [
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "차수*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-11": {
+      "월": [
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "1-12": {
+      "월": [
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "구본*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "황성*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "강서*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김희*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김종*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-1": {
+      "월": [
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-2": {
+      "월": [
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "손은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-3": {
+      "월": [
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "은정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "김소*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "전진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-4": {
+      "월": [
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김환*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-5": {
+      "월": [
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-6": {
+      "월": [
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "한지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-7": {
+      "월": [
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "오가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임상*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-8": {
+      "월": [
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "오동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이근*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "송다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "신하*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-9": {
+      "월": [
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "방지*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-10": {
+      "월": [
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "임민*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "곽정*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-11": {
+      "월": [
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "윤초*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김경*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "장은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "정재*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ]
+    },
+    "2-12": {
+      "월": [
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "화": [
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "수": [
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박창*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김은*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "목": [
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "박노*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "강다*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
+      ],
+      "금": [
+        {
+          "teacher": "이주*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김진*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김병*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "홍루*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김연*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "김동*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "이가*",
+          "group": null,
+          "changed": false
+        },
+        {
+          "teacher": "",
+          "group": null,
+          "changed": false
+        }
       ]
     }
   }
