@@ -5,6 +5,9 @@ on:
     - cron: "0 21 * * *" # 매일 UTC 21:00 (한국시간 오전 6시)
   workflow_dispatch: {} # 수동 실행 버튼도 사용 가능
 
+permissions:
+  contents: write # github-actions[bot]이 커밋/푸시할 수 있도록 쓰기 권한 부여
+
 jobs:
   update-teachers:
     runs-on: ubuntu-latest
