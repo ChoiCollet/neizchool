@@ -1,6 +1,6 @@
 {
   "_설명": "이 파일은 scripts/scrape_teachers.py가 매일 자동으로 갱신합니다. weekOf와 다른 주를 보고 있으면 사이트는 이 데이터를 사용하지 않습니다.",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "weekOf": "2026-09-07",
   "source": "comci-auto",
   "classes": {
