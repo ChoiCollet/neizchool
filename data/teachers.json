@@ -1,7 +1,7 @@
 {
   "_설명": "이 파일은 scripts/scrape_teachers.py가 매일 자동으로 갱신합니다. weekOf와 다른 주를 보고 있으면 사이트는 이 데이터를 사용하지 않습니다.",
-  "updatedAt": "2026-10-15",
-  "weekOf": "2026-10-12",
+  "updatedAt": "2026-10-16",
+  "weekOf": "2026-10-19",
   "source": "comci-auto",
   "classes": {
     "1-1": {
@@ -1755,9 +1755,9 @@
           "changed": false
         },
         {
-          "teacher": "황성*",
+          "teacher": "김종*",
           "group": null,
-          "changed": false
+          "changed": true
         },
         {
           "teacher": "김진*",
@@ -1770,9 +1770,9 @@
           "changed": false
         },
         {
-          "teacher": "김희*",
+          "teacher": "이명*",
           "group": null,
-          "changed": false
+          "changed": true
         },
         {
           "teacher": "차수*",
